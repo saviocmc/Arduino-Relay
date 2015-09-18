@@ -20,7 +20,7 @@ class Relay{
 	//bool stateLocked = false;
 
 public:
-	Relay(byte relayPin, int eepromByte = 0);
+	Relay(byte relayPin, int eepromByte = 1023);
 	byte setState(byte newState);
 	byte switchState();
 	byte getState();
