@@ -45,7 +45,7 @@ byte Relay::getState(){
 }
 
 void Relay::echoState(Stream *serialPort){
-	if (this->getState()) serialPort->write("RelayON#");
+	if (getState()) serialPort->write("RelayON#");
 	else serialPort->write("RelayOFF#");
 }
 

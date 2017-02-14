@@ -17,7 +17,6 @@ class Relay{
 
 	bool switchableToOn = true;
 	bool switchableToOff = true;
-	//bool stateLocked = false;
 
 public:
 	Relay(byte relayPin, int eepromByte = 1023);
@@ -28,11 +27,7 @@ public:
 	void setSwitchableToOn(bool switchableToOn);
 	void setSwitchableToOff(bool switchableToOff);
 	bool isSwitchableToOn();
-	bool isSwitchableToOff();
-	
-	/*void lockState();
-	void unlockState();
-	bool isStateLocked();*/
+	bool isSwitchableToOff();	
 };
 
 #endif
