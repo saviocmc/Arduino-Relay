@@ -6,17 +6,7 @@
 
 #include "Arduino.h"
 
-class Relay{
-	static byte count;
-	static byte globalState;
-	byte id;
-	byte pin;
-	byte state;
-	uint8_t eepromByte;
-	void saveState();
-
-	bool switchableToOn = true;
-	bool switchableToOff = true;
+class Relay {
 
 public:
 	Relay(byte relayPin, int eepromByte = 1023);
@@ -27,7 +17,18 @@ public:
 	void setSwitchableToOn(bool switchableToOn);
 	void setSwitchableToOff(bool switchableToOff);
 	bool isSwitchableToOn();
-	bool isSwitchableToOff();	
+	bool isSwitchableToOff();
+
+private:
+	static byte count;
+	static byte globalState;
+	byte id;
+	byte pin;
+	byte state;
+	uint8_t eepromByte;
+	void saveState();
+	bool switchableToOn = true;
+	bool switchableToOff = true;
 };
 
 #endif
